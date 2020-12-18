@@ -21,4 +21,4 @@ Requests:
 > pip install requests
 
 BeautifulSoup
-> pip instal bs4
+> pip install beautifulsoup4
