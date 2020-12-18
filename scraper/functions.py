@@ -16,7 +16,6 @@ def get_student_courses(platzi_username, response):
     # setup params
     queries = site_config['queries']
     url = site_config['url_search'].replace('$username$', platzi_username)
-    print(f'URL to scrape is: {url}')
 
     # request url
     try:

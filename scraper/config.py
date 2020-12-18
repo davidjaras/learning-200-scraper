@@ -2,11 +2,12 @@
 Config file that contains information about Platzi WebPage selectors
 '''
 
+ok_response = 'OK: 200'
 
 site_config = {
     'name': 'Platzi',
     'domain': 'https://platzi.com',
-    'url_search': 'https://platzi.com/p/$username$',
+    'url_search': 'https://platzi.com/@$username$',
     'queries': {
         'container_elements': 'script',
         'regex_filter': 'courses: \[.*\]',
