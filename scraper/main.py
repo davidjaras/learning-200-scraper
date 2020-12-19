@@ -1,5 +1,14 @@
+'''
+Flask app.
+Scraper API.
+'''
+
+# python imports
 import flask
+
+# scraper imports
 from scraper import scrape_student_profile
+
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True

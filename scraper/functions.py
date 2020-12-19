@@ -24,10 +24,10 @@ def get_student_courses(platzi_username, response):
     except Exception as e:
         response['message'] = f'Error: {e}'
         return response
-    
+
     if response_link.status_code != site_config['success_http_status_code']:
         response['message'] = f'Fail. Status code: {response_link.status_code}'
-    
+
     ''' Get courses. '''
     soup = bs4.BeautifulSoup(response_link.text, 'html.parser')
     elements = soup.select(queries['container_elements'])
@@ -39,8 +39,7 @@ def get_student_courses(platzi_username, response):
         if str_courses is not None:
             # string processing to return courses in json format
             courses = str_courses.group(queries['regex_group'])
-            courses = courses.replace('courses: ','')
+            courses = courses.replace('courses: ', '')
             response['courses'] = json.loads(courses)
-    
+
     return response
-  

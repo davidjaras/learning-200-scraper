@@ -24,5 +24,3 @@ def scrape_student_profile(username):
         response['message'] = 'Profile is private or has not approved courses'
 
     return(response)
-
-   
